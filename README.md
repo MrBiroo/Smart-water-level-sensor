@@ -140,8 +140,7 @@ README.md
 ```
 
 Credits & contact
-- Author: You (set your GitHub profile)
-- Device owner / contact: your email or GitHub profile link
+- Author: MrBiroo
 
 License
 -------
