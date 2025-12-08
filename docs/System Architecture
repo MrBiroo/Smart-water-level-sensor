@@ -1,0 +1,39 @@
+                     ┌───────────────────────────┐
+                     │        Water Tank         │
+                     │                           │
+                     │   ┌───────────────────┐   │
+                     │   │ Ultrasonic Sensor │   │
+                     │   │    HC-SR04        │   │
+                     │   └───────┬──────────┘   │
+                     └───────────┼──────────────┘
+                                 │ Trigger/Echo
+                                 │
+                     ┌───────────▼───────────┐
+                     │        ESP32          │
+                     │────────────────────────│
+                     │  • Distance filtering  │
+                     │  • Tank % calculation  │
+                     │  • Liter estimation    │
+                     │  • WiFi reconnect      │
+                     │  • Deep sleep          │
+                     └───────────┬───────────┘
+                                 │ WiFi (2.4GHz)
+                                 ▼
+                     ┌────────────────────────────┐
+                     │       MQTT Broker          │
+                     │   (HiveMQ Public Broker)   │
+                     │  mqtt://broker.hivemq.com  │
+                     └───────────┬───────────────┘
+                                 │ MQTT Topics:
+                                 │ • roof/waterlevel%
+                                 │ • roof/waterlevel_liters
+                                 │ • roof/waterlevel_distant
+                                 ▼
+      ┌─────────────────────────────────────────────────────────┐
+      │                  Client Applications                    │
+      │─────────────────────────────────────────────────────────│
+      │ • Mobile App (MQTT Dashboard)                           │
+      │ • Home Assistant / Node-RED Dashboard                   │
+      │ • MQTT Explorer / WebSocket Dashboard                   │
+      └─────────────────────────────────────────────────────────┘
+
