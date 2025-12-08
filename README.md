@@ -124,20 +124,6 @@ Future improvements
 - Add automatic calibration routine and per-tank configuration UI
 - Add battery monitoring and temperature compensation for speed of sound
 
-Repository structure (recommended)
-```
-/src
-  main.ino
-  config.example.h
-/docs
-  wiring.md
-  usage.md
-/diagrams
-  architecture.txt
-.gitignore
-LICENSE
-README.md
-```
 
 Credits & contact
 - Author: MrBiroo
